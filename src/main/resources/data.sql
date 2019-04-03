@@ -1,0 +1,1 @@
+INSERT INTO bookmarks(url, title) VALUES('data', 'data');

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create a bookmark</title>
+</head>
+<body>
+<h1>Form</h1>
+<form action="#" th:action="@{/create_bookmark}" th:object="${bookmark}" method="post">
+    <p>Url: <input type="text" th:field="*{url}" /></p>
+    <p>Title: <input type="text" th:field="*{title}" /></p>
+    <p><input type="submit" value="Submit" /></p>
+</form>
+</body>
+</html>
