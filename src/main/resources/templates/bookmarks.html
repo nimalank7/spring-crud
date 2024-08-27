@@ -2,21 +2,23 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Index Page</title>
+    <title>Bookmark Manager</title>
 </head>
 <body>
 <table>
-
-
     <ul th:each="item : ${bookmarks}">
         <li id ="#" th:id="${item.getid()}" th:text="${item.gettitle()}"></li>
-        <div><form action="#" th:action="@{'/bookmark/' + ${item.getid()} + '/delete'}" method="POST">
-            <input id="hidden" type="hidden" name="_method" value="delete">
-            <button type="submit">Delete</button>
-        </form></div>
-        <div><form action="#" th:action="@{'/bookmark/update/' + ${item.getid()}}" method="GET">
+        <div>
+            <form action="#" th:action="@{'/bookmark/' + ${item.getid()} + '/delete'}" method="POST">
+                <input id="hidden" type="hidden" name="_method" value="delete">
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+        <div>
+            <form action="#" th:action="@{'/bookmark/update/' + ${item.getid()}}" method="GET">
             <button type="submit">Update</button>
-        </form></div>
+            </form>
+        </div>
     </ul>
 </table>
 

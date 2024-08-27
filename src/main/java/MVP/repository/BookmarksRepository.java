@@ -10,3 +10,4 @@ public interface BookmarksRepository extends CrudRepository<Bookmarks, Integer> 
     @Query(value = "SELECT * FROM bookmarks WHERE id=?1", nativeQuery = true)
     List<Bookmarks> findbookmark(int id);
 }
+

@@ -14,9 +14,7 @@ public class HomeController {
 
     @Autowired
     public HomeController(BookmarksRepository bookmarksRepository) {
-
         this.bookmarksRepository = bookmarksRepository;
-
     }
 
     @Autowired
@@ -65,6 +63,5 @@ public class HomeController {
         update_bookmark.seturl(new_bookmark.geturl());
         bookmarksRepository.save(update_bookmark);
         return "redirect:/allbookmarks";
-        // Is there a better way of doing updating?
     }
 }
